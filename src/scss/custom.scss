@@ -4340,6 +4340,14 @@ ul.notifications {
 /** /Dropzone.js **/
 
 /*--------------------CUSTOM--------------------*/
+.nav-md .container.body .right_col, .nav-sm .container.body .right_col {
+  padding: 10px 0;
+}
+
+.nav-md .container.body .right_col .overview-1 .content, .nav-sm .container.body .right_col .overview-1 .content {
+  background: white;
+}
+
 .nav.navbar-nav > li > a {
     padding-bottom: 3px;
     padding-top: 3px;
@@ -4348,4 +4356,17 @@ ul.notifications {
 
 .toggle {
     padding-top: 6px;
+}
+
+.tab-content .tab-pane .data-container {
+  border: 1px solid black;
+  min-height: 280px;
+}
+
+.site_title {
+  height: 90px;
+}
+
+.site_title img {
+  width: 96%;
 }
