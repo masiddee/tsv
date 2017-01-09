@@ -3897,6 +3897,9 @@ ul.notifications {
   padding-top: 3px;
   font-size: .9em; }
 
+.tab-pane .row {
+  margin-bottom: 20px; }
+
 .toggle {
   padding-top: 6px; }
 
