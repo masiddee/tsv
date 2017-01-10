@@ -4374,3 +4374,19 @@ ul.notifications {
 .site_title img {
   width: 96%;
 }
+
+.right_col .overview-1 .content .panel {
+  margin-top: 20px;
+}
+
+.panel-body.profile img {
+  width: 150px;
+  height: 150px;
+  border: 1px solid darkgray;
+  float: left;
+  margin-right: 20px;
+}
+
+.panel-body.profile ul {
+  list-style: none;
+}
