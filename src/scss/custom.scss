@@ -4390,3 +4390,7 @@ ul.notifications {
 .panel-body.profile ul {
   list-style: none;
 }
+
+.nav.side-menu > li > a.live, .nav.side-menu > li > a.live:hover, .nav.side-menu > li > a.live:visited, .nav.side-menu > li > a.live:active {
+  color: #149bdf !important;
+}
