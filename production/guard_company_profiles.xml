@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contractors>
+    <company>
+        <name>MSiddeeq.com</name>
+        <address>123 Main Street, Atlanta, GA 30318</address>
+        <phone>4047132220</phone>
+        <naics>N/A</naics>
+        <certs>FEWD, PHP</certs>
+    </company>
+    <company>
+        <name>The SimpleVUE</name>
+        <address>555 North Ave, Atlanta, GA 30322</address>
+        <phone>4045551234</phone>
+        <naics>01132</naics>
+        <certs>Data, Salesforce</certs>
+    </company>
+</contractors>

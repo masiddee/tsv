@@ -26,7 +26,7 @@
   <!-- Custom Theme Style -->
   <link href="../build/css/custom.min.css" rel="stylesheet">
   <!-- Custom Theme Style -->
-  <link href="../build/css/custom.css" rel="stylesheet">
+  <!--<link href="../build/css/custom.css" rel="stylesheet">-->
 </head>
 
 <body class="nav-md">
@@ -59,7 +59,7 @@
             <ul class="nav side-menu">
               <li><a href="#"><i class="fa fa-tag"></i>Contracts History</a></li>
               <li><a href="#"><i class="fa fa-tags"></i>Active Contract Opportunities</a></li>
-              <li><a href="#"><i class="fa fa-edit"></i>Submit Company Information</a></li>
+              <li><a href="guard_submit_info.html" class="live"><i class="fa fa-edit"></i>Submit Company Information</a></li>
               <li><a href="#"><i class="fa fa-file"></i>Data Download Center</a></li>
               <li><a href="#"><i class="fa fa-table"></i>Industry Event Calendar</a></li>
             </ul>
@@ -114,13 +114,18 @@
       <div class="overview-1">
 
         <!-- top tiles -->
-        <div class="container-fluid tile_count">
+        <div class="container-fluid">
           <div class="title_overview">
             <h1 class="text-right">Georgia Department of Defense Contractors</h1>
           </div>
           <div class="row">
             <div class="col-xs-4">
-
+              <div class="form-group">
+                <label class="control-label col-md-2 col-sm-2 col-xs-12 text-right" for="first-name">Filter:</label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
+                </div>
+              </div>
             </div>
           </div>
 
@@ -239,6 +244,35 @@
 <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
 <!-- Custom Theme Scripts -->
 <script src="../build/js/custom.min.js"></script>
+<!-- Custom JQuery XML script -->
+<script>
+    // Pull Contractors company info from XML file and populate profile information
+    $(document).ready(function() {
+        var companyProfiles = {};
+
+        $.ajax({
+            type: "GET",
+            url: "guard_company_profiles.xml",
+            cache: false,
+            dataType: "xml",
+            success: function(xml) {
+                $(xml).find('company').each(function () {
+                    companyProfiles.company = {};
+                    companyProfiles.company.name = $(this).find('name').text();
+                    companyProfiles.company.address = $(this).find('address').text();
+                    companyProfiles.company.phone = $(this).find('phone').text();
+                    companyProfiles.company.naics = $(this).find('naics').text();
+                    companyProfiles.company.certs = $(this).find('certs').text();
+                });
+            },
+            error: function () {
+                alert("The XML file could not be processed correctly.");
+            }
+        });
+        // NEEDS WORK -- currently only pulling in the last company from the XML file
+        console.log(companyProfiles);
+    });
+</script>
 
 </body>
 </html>
