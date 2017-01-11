@@ -1,309 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<!-- Meta, title, CSS, favicons, etc. -->
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>GUARD Economic Impact Model</title>
+    <title>GUARD Economic Impact Model</title>
 
-	<!-- Bootstrap -->
-	<link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-	<!-- Font Awesome -->
-	<link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-	<!-- NProgress -->
-	<link href="vendors/nprogress/nprogress.css" rel="stylesheet">
-	<!-- iCheck -->
-	<link href="vendors/iCheck/skins/flat/green.css" rel="stylesheet">
-	<!-- bootstrap-progressbar -->
-	<link href="vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
-	<!-- JQVMap -->
-	<link href="vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
-	<!-- bootstrap-daterangepicker -->
-	<link href="vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
-	<!-- Custom Theme Style -->
-	<link href="build/css/custom.min.css" rel="stylesheet">
-	<!-- Custom Theme Style -->
-	<link href="build/css/custom.css" rel="stylesheet">
-  </head>
+    <!-- Bootstrap -->
+    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- Custom Theme Style -->
+    <link href="build/css/lp-custom.css" rel="stylesheet">
 
-	<body class="nav-md">
-		<div class="container body">
-			<div class="main_container">
-				<div class="col-md-3 left_col">
-                    <div class="left_col scroll-view">
-                        <div class="navbar nav_title"> <!--style="border: 0;"-->
-                            <a href="index.html" class="site_title">
-                                <img src="production/images/GDECD_Logo_white_1.png" class="gdecd-logo">
-                            </a>
-                        </div>
+</head>
+<body>
+<header>
+    <div class="container">
+        <img src="production/images/GDECD_Logo_white_1.png" class="logo"/></div>
+</header>
+<div class="jumbotron">
 
-                        <div class="clearfix"></div>
+    <div id="black"></div>
+    <!--<video autoplay muted loop id="video-bg">
+       <source src="http://www.istockphoto.com/video_passthrough/17839538/153/17839538.mp4" type="video/mp4">
+  </video> -->
 
-                        <!-- menu profile quick info -->
-                        <!--<div class="profile clearfix">-->
-                          <!--<div class="profile_pic">-->
-                            <!--<img src="production/images/img.jpg" alt="..." class="img-circle profile_img">-->
-                          <!--</div>-->
-                          <!--<div class="profile_info">-->
-                            <!--<span>Welcome,</span>-->
-                            <!--<h2>USER NAME TEXT</h2>-->
-                          <!--</div>-->
-                        <!--</div>-->
-                        <!-- /menu profile quick info -->
+    <div style="" class="animated fadeInDown">
+        <div class="container">
+            <div class="col-md-12">
 
-                        <br />
+                <h1>THE GUARD INITIATIVE<br class="visible-lg "/>Economic Impact Evaluation Model</h1>
+                <hr style="width:25%;text-align:left;margin:30px 0; border:2.5px solid #fff;"/>
+            </div>
+            <div class="col-md-8">
+                <h2 class="subtitle">Statewide Program Designed to Diversify Georgia Defense-Related Businesses.</h2>
+            </div>
 
-                        <!-- sidebar menu -->
-                        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-                            <div class="menu_section">
-                                <ul class="nav side-menu">
-                                    <li><a href="#" class="live"><i class="fa fa-edit"></i>Overview</a></li>
-                                    <li><a href="#"><i class="fa fa-home"></i>Economic Impact</a></li>
-                                    <li><a href="#"><i class="fa fa-road"></i>Scenario Simulations</a></li>
-                                    <li><a href="production/guard_contractors.html" class="live"><i class="fa fa-bug"></i>Georgia Contractors</a></li>
-                                </ul>
-                            </div>
-                            <div class="menu_section">
-                                <h3>Other Features</h3>
-                                <ul class="nav side-menu">
-                                    <li><a href="#"><i class="fa fa-tag"></i>Contracts History</a></li>
-                                    <li><a href="#"><i class="fa fa-tags"></i>Active Contract Opportunities</a></li>
-                                    <li><a href="#"><i class="fa fa-edit"></i>Submit Company Information</a></li>
-                                    <li><a href="#"><i class="fa fa-file"></i>Data Download Center</a></li>
-                                    <li><a href="#"><i class="fa fa-table"></i>Industry Event Calendar</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- /sidebar menu -->
+        </div>
+    </div>
+</div>
 
-                        <!-- /menu footer buttons -->
-                        <div class="sidebar-footer hidden-small">
-                          <a data-toggle="tooltip" data-placement="top" title="FullScreen">
-                            <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
-                          </a>
-                        </div>
-                        <!-- /menu footer buttons -->
-                    </div>
-				</div>
+<div class="container" id="main-wrapper">
+    <div class="col-md-7 main-content">
+        <h3>Now you have access to the data you will actually use</h3>
+        <p>
+            Defense contracts inject billions of dollars into Washington state each year. The modeling tools and interactive visualizations on this site analyze the direct and secondary impacts that defense contracts have in Georgia. </p>
 
-				<!-- top navigation -->
-				<div class="top_nav">
-				  <div class="nav_menu">
-					<nav>
-					  <div class="nav toggle">
-						<a id="menu_toggle"><i class="fa fa-bars"></i></a>
-					  </div>
+        <div class="white-box">
+            <ul>
+                <li><p class="">TEXT</p></li>
+                <li><p class="">TEXT</p></li>
+                <li><p class="">TEXT</p></li>
+            </ul>
+        </div><!-- /. End White Box 0-->
 
-					  <ul class="nav navbar-nav navbar-right">
-						<li class="">
-						  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-							<img src="production/images/img.jpg" alt="">USER NAME TEXT
-							<span class=" fa fa-angle-down"></span>
-						  </a>
-						  <ul class="dropdown-menu dropdown-usermenu pull-right">
-							<li><a href="javascript:;"> Profile</a></li>
-							<li>
-							  <a href="javascript:;">
-								<span class="badge bg-red pull-right">50%</span>
-								<span>Settings</span>
-							  </a>
-							</li>
-							<li><a href="javascript:;">Help</a></li>
-							<li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
-						  </ul>
-						</li>
-					  </ul>
-					</nav>
-				  </div>
-				</div>
-				<!-- /top navigation -->
+        <p class="final-cta">Launch the Economic Impact Evaluation Model to view the results.</p>
+    </div>
+    <div class="col-md-4 col-md-offset-1">
+        <div class="form-container">
+            <h4>Fill out the Form Below to Access the Economic Impact Model Now</h4>
+            <form  method="post" name="frmContentDownload">
+                <div><label for="FirstName1">First Name</label><input class="form-control" name="FirstName1" type="text" value="" /></div>
+                <div><label for="LastName1">Last Name</label><input class="form-control" name="LastName1" type="text" value="" /></div>
+                <div><label for="emailAddress">Email</label><input class="form-control" name="emailAddress" type="text" value="" /></div>
+                <div><label for="Company1">Company</label><input class="form-control" name="Company1" type="text" value="" /></div>
+                <div><label for="Title1">Title</label><input class="form-control" name="Title1" type="text" value="" /></div>
+                <div><label for="StateProvince1">State or Province</label><select class="form-control" name="StateProvince1">
+                    <option class="placeholder" value="" disabled selected>STATE OR PROVINCE &#8609;</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AL">Alabama</option>
+                    <option value="AR">Arkansas</option>
+                    <option value="AS">American Samoa</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="CA-N">California - Northern</option>
+                    <option value="CA-S">California - Southern</option>
+                    <option value="CO">Colorado</option>
+                    <option value="CT">Connecticut</option>
+                    <option value="DC">D.C.</option>
+                    <option value="DE">Delaware</option>
+                    <option value="FL">Florida</option>
+                    <option value="FM">Micronesia</option>
+                    <option value="GA">Georgia</option>
+                    <option value="GU">Guam</option>
+                    <option value="HI">Hawaii</option>
+                    <option value="IA">Iowa</option>
+                    <option value="ID">Idaho</option>
+                    <option value="IL">Illinois</option>
+                    <option value="IN">Indiana</option>
+                    <option value="KS">Kansas</option>
+                    <option value="KY">Kentucky</option>
+                    <option value="LA">Louisiana</option>
+                    <option value="MA">Massachusetts</option>
+                    <option value="MD">Maryland</option>
+                    <option value="ME">Maine</option>
+                    <option value="MH">Marshall Islands</option>
+                    <option value="MI">Michigan</option>
+                    <option value="MN">Minnesota</option>
+                    <option value="MO">Missouri</option>
+                    <option value="MP">Marianas</option>
+                    <option value="MS">Mississippi</option>
+                    <option value="MT">Montana</option>
+                    <option value="NC">North Carolina</option>
+                    <option value="ND">North Dakota</option>
+                    <option value="NE">Nebraska</option>
+                    <option value="NH">New Hampshire</option>
+                    <option value="NJ">New Jersey</option>
+                    <option value="NM">New Mexico</option>
+                    <option value="NV">Nevada</option>
+                    <option value="NY">New York</option>
+                    <option value="OH">Ohio</option>
+                    <option value="OK">Oklahoma</option>
+                    <option value="OR">Oregon</option>
+                    <option value="PA">Pennsylvania</option>
+                    <option value="PR">Puerto Rico</option>
+                    <option value="PW">Palau</option>
+                    <option value="RI">Rhode Island</option>
+                    <option value="SC">South Carolina</option>
+                    <option value="SD">South Dakota</option>
+                    <option value="TN">Tennessee</option>
+                    <option value="TX">Texas</option>
+                    <option value="UT">Utah</option>
+                    <option value="VA">Virginia</option>
+                    <option value="VI">Virgin Islands</option>
+                    <option value="VT">Vermont</option>
+                    <option value="WA">Washington</option>
+                    <option value="WI">Wisconsin</option>
+                    <option value="WV">West Virginia</option>
+                    <option value="WY">Wyoming</option>
+                    <option value="AA">Military Americas</option>
+                    <option value="AE">Military Europe/ME/Canada</option>
+                    <option value="AP">Military Pacific</option>
+                    <option value="AB">Alberta</option>
+                    <option value="MB">Manitoba</option>
+                    <option value="BC">British Columbia</option>
+                    <option value="NB">New Brunswick</option>
+                    <option value="NL">Newfoundland and Labrador</option>
+                    <option value="NS">Nova Scotia</option>
+                    <option value="NT">Northwest Territories</option>
+                    <option value="NU">Nunavut</option>
+                    <option value="ON">Ontario</option>
+                    <option value="PE">Prince Edward Island</option>
+                    <option value="QC">Quebec</option>
+                    <option value="SK">Saskatchewan</option>
+                    <option value="YT">Yukon Territory</option>
+                </select></div>
+                <div><label for="comments">Comments</label><input class="form-control" name="comments" type="text" value="" /></div>
 
-				<!-- page content -->
-				<div class="right_col" role="main">
-					<div class="overview-1">
+                <!--<div href="guard_overview.html"><input class="btn btn-primary btn-lg btn-block" type="submit" value="Launch Now" /></div>-->
+                <a href="production/guard_overview.html" class="btn btn-lg btn-primary">Launch Now</a>
+            </form>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container">© 2017 Georgia Department of Economic Development. All rights reserved.</div>
+</footer>
 
-						<!-- top tiles -->
-						<div class="container-fluid tile_count">
-							<div class="title_overview">
-								<h1 class="text-right">Overview -- Department of Defense Spending in Georgia</h1>
-							</div>
-                            <ul class="nav nav-pills nav-justified">
-                                <li class="active"><a href="#pane1" data-toggle="tab">Defense<br/>Spending</a></li>
-                                <li class=""><a href="#pane2" data-toggle="tab">Defense<br/>Contractors</a></li>
-                                <li class=""><a href="#pane3" data-toggle="tab">Military<br/>Installations</a></li>
-                                <li class=""><a href="#pane4" data-toggle="tab">In-State vs. Out of State<br/>Spending Flow</a></li>
-                            </ul>
-						</div>
-
-						<div class="content container-fluid">
-                            <div class="tab-content">
-                                <div id="pane1" class="tab-pane active">
-                                    <h3>DEFENSE CONTRACT SPENDING, NATIONALLY VS. GEORGIA</h3>
-                                    <div class="row">
-                                        <div class="col-xs-9">
-                                            <div class="data-container">
-
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-3">
-                                            <div class="data-container">
-
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <h3>DEFENSE CONTRACT SPENDING IN GEORGIA</h3>
-                                    <div class="row">
-                                        <div class="col-xs-12">
-                                            <div class="data-container">
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-xs-6">
-                                            <div class="data-container">
-
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-6">
-                                            <div class="data-container">
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div id="pane2" class="tab-pane">
-                                    <h3>DEPARTMENT OF DEFENSE CONTRACTORS IN GEORGIA</h3>
-                                    <div class="row">
-                                        <div class="col-xs-8">
-                                            <div class="data-container">
-
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-4">
-                                            <div class="data-container">
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <h3>GEORGIA DEPARTMENT OF DEFENSE CONTRACTORS BY CONTACT ATTRIBUTES</h3>
-                                    <div class="row">
-                                        <div class="col-xs-12">
-                                            <div class="data-container">
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div id="pane3" class="tab-pane">
-                                    <h3>GEORGIA MILITARY INSTALLATIONS</h3>
-                                    <div class="row">
-                                        <div class="col-xs-12">
-                                            <div class="data-container">
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-xs-12">
-                                            <div class="data-container">
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div id="pane4" class="tab-pane">
-                                    <h3>COUNTY-TO-COUNTY DEFENSE SPENDING</h3>
-                                    <div class="row">
-                                        <div class="col-xs-8">
-                                            <div class="data-container">
-
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-4">
-                                            <div class="data-container">
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-xs-8">
-                                            <div class="data-container">
-
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-4">
-                                            <div class="data-container">
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-						</div>
-
-					</div>
-				</div>
-			</div>
-
-			<!-- /page content -->
-
-			<!-- footer content -->
-			<footer>
-			  <div class="pull-right">
-
-			  </div>
-			  <div class="clearfix"></div>
-			</footer>
-			<!-- /footer content -->
-		</div>
-
-		<!-- jQuery -->
-		<script src="vendors/jquery/dist/jquery.min.js"></script>
-		<!-- Bootstrap -->
-		<script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-		<!-- FastClick -->
-		<script src="vendors/fastclick/lib/fastclick.js"></script>
-		<!-- NProgress -->
-		<script src="vendors/nprogress/nprogress.js"></script>
-		<!-- Chart.js -->
-		<script src="vendors/Chart.js/dist/Chart.min.js"></script>
-		<!-- gauge.js -->
-		<script src="vendors/gauge.js/dist/gauge.min.js"></script>
-		<!-- bootstrap-progressbar -->
-		<script src="vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-		<!-- iCheck -->
-		<script src="vendors/iCheck/icheck.min.js"></script>
-		<!-- Skycons -->
-		<script src="vendors/skycons/skycons.js"></script>
-		<!-- Flot -->
-		<script src="vendors/Flot/jquery.flot.js"></script>
-		<script src="vendors/Flot/jquery.flot.pie.js"></script>
-		<script src="vendors/Flot/jquery.flot.time.js"></script>
-		<script src="vendors/Flot/jquery.flot.stack.js"></script>
-		<script src="vendors/Flot/jquery.flot.resize.js"></script>
-		<!-- Flot plugins -->
-		<script src="vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-		<script src="vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
-		<script src="vendors/flot.curvedlines/curvedLines.js"></script>
-		<!-- DateJS -->
-		<script src="vendors/DateJS/build/date.js"></script>
-		<!-- JQVMap -->
-		<script src="vendors/jqvmap/dist/jquery.vmap.js"></script>
-		<script src="vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-		<script src="vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
-		<!-- bootstrap-daterangepicker -->
-		<script src="vendors/moment/min/moment.min.js"></script>
-		<script src="vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-		<!-- Custom Theme Scripts -->
-		<script src="build/js/custom.min.js"></script>
-
-	</body>
+</body>
 </html>
