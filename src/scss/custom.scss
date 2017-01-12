@@ -4398,3 +4398,8 @@ ul.notifications {
 .nav.side-menu > li > a.live, .nav.side-menu > li > a.live:hover, .nav.side-menu > li > a.live:visited, .nav.side-menu > li > a.live:active {
   color: #149bdf !important;
 }
+
+.wizard_horizontal .wizard_steps .step_descr {
+  width:120px;
+  display: inline-block;
+}
