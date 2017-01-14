@@ -4366,7 +4366,7 @@ ul.notifications {
     padding-top: 6px;
 }
 
-.tab-content .tab-pane .data-container {
+.row .data-container {
   border: 1px solid black;
   min-height: 280px;
 }
@@ -4383,16 +4383,21 @@ ul.notifications {
   margin-top: 20px;
 }
 
-.panel-body.profile img {
+.profile_guard img {
   width: 150px;
   height: 150px;
-  border: 1px solid darkgray;
   float: left;
   margin-right: 20px;
 }
 
-.panel-body.profile ul {
+.profile_guard ul {
   list-style: none;
+  padding-left: 5px;
+}
+
+.profile_guard ul li span {
+  color: #2c2c2c;
+  font-weight: bold;
 }
 
 .nav.side-menu > li > a.live, .nav.side-menu > li > a.live:hover, .nav.side-menu > li > a.live:visited, .nav.side-menu > li > a.live:active {
@@ -4402,4 +4407,19 @@ ul.notifications {
 .wizard_horizontal .wizard_steps .step_descr {
   width:120px;
   display: inline-block;
+}
+
+/*-- Modal Edits --*/
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 740px;
+    margin: 30px auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .modal-dialog {
+    width: 960px;
+    margin: 30px auto;
+  }
 }
