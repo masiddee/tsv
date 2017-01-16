@@ -184,6 +184,7 @@
                                         <h4 class="modal-title" id="myModalLabel">Create Custom Impact Scenario</h4>
                                     </div>
                                     <div id="impact-setup" class="modal-body">
+                                        <button class="btn btn-default btn-sm impact-reset">Reset</button>
                                         <div id="impact-step1" class="text-center">
                                             <button type="button" class="btn btn-primary btn-xl btn-impact" data-impact="region-step2">Geographic Region<br/><span>Adjustment to Contract Expenditures</span></button>
                                             <button type="button" class="btn btn-primary btn-xl btn-impact disabled" data-impact="">Contracts<br/><span>Choose a subset of current contracts</span></button>
@@ -192,7 +193,7 @@
                                             <button type="button" class="btn btn-primary btn-xl btn-impact disabled" data-impact="">Military Installations<br/><span>Adjustment to Service Contracts</span></button>
                                         </div>
 
-                                        <div id="impact-region-step2" class="text-center hide">
+                                        <div id="impact-region-step2" class="impact-containers text-center hide">
                                             <button type="button" class="btn btn-primary btn-xl disabled">Geographic Region<br/><span>Adjustment to Contract Expenditures</span></button>
                                             <h3>Filter by State, County, or Region:</h3>
                                             <button type="button" class="btn btn-primary btn-lg btn-impact" data-impact="region-state-step3">State</button>
@@ -200,7 +201,7 @@
                                             <button type="button" class="btn btn-primary btn-lg btn-impact" data-impact="region-regions-step3">Regions</button>
                                         </div>
 
-                                        <div id="impact-region-state-step3" class="text-center hide">
+                                        <div id="impact-region-state-step3" class="impact-containers text-center hide">
                                             <button type="button" class="btn btn-primary btn-xl disabled">Geographic Region<br/><span>Adjustment to Contract Expenditures</span></button><br/>
                                             <button type="button" class="btn btn-primary btn-lg disabled">States</button>
                                             <div class="form-group">
@@ -265,7 +266,7 @@
                                             <button class="btn btn-sm btn-success">+ Add Adjustment</button>
                                         </div>
 
-                                        <div id="impact-region-counties-step3" class="text-center hide">
+                                        <div id="impact-region-counties-step3" class="impact-containers text-center hide">
                                             <button type="button" class="btn btn-primary btn-xl disabled">Geographic Region<br/><span>Adjustment to Contract Expenditures</span></button><br/>
                                             <button type="button" class="btn btn-primary btn-lg disabled">Counties</button><br/>
                                             <div class="form-group">
@@ -309,7 +310,7 @@
                                             <button class="btn btn-sm btn-success">+ Add Adjustment</button>
                                         </div>
 
-                                        <div id="impact-region-regions-step3" class="text-center hide">
+                                        <div id="impact-region-regions-step3" class="impact-containers text-center hide">
                                             <button type="button" class="btn btn-primary btn-xl disabled">Geographic Region<br/><span>Adjustment to Contract Expenditures</span></button><br/>
                                             <button type="button" class="btn btn-primary btn-lg disabled">Regions</button><br/>
                                             <div class="form-group">
@@ -446,6 +447,13 @@
                     }else if(this.value == 'percent'){
                         $('.input-number').attr('max',100);
                     }
+                });
+
+                $('.impact-reset').on("click",function (e) {
+                    e.preventDefault();
+
+                    $('#impact-step1').removeClass("hide");
+                    $('.impact-containers').addClass("hide");
                 });
 
                 //plugin bootstrap minus and plus: http://bootsnipp.com/snippets/featured/buttons-minus-and-plus-in-input
