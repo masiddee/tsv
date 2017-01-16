@@ -4423,3 +4423,22 @@ ul.notifications {
     margin: 30px auto;
   }
 }
+
+.btn-xl {
+  padding: 25px 16px;
+  font-size: 22px;
+  line-height: 1.3333333;
+  border-radius: 8px;
+}
+
+.btn-xl span {
+  font-size: .7em;
+  color: #e0e0e0;
+}
+
+.form-group {
+  text-align: left !important;
+  overflow: auto;
+  width: 70%;
+  margin: 10px auto 20px;
+}

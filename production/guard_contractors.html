@@ -350,12 +350,14 @@
             dataType: "xml",
             success: function(xml) {
                 $(xml).find('company').each(function () {
-                    companyProfiles.company = {};
-                    companyProfiles.company.name = $(this).find('name').text();
-                    companyProfiles.company.address = $(this).find('address').text();
-                    companyProfiles.company.phone = $(this).find('phone').text();
-                    companyProfiles.company.naics = $(this).find('naics').text();
-                    companyProfiles.company.certs = $(this).find('certs').text();
+
+//                    $.each(this, function (i, attribute) {
+//                        companyProfiles.name = attribute.name;
+//                        companyProfiles.address = attribute.address;
+//                        companyProfiles.phone = attribute.phone;
+//                        companyProfiles.naics = attribute.naics;
+//                        companyProfiles.certs = attribute.certs;
+//                    });
                 });
             },
             error: function () {
@@ -363,7 +365,7 @@
             }
         });
         // NEEDS WORK -- currently only pulling in the last company from the XML file
-        console.log(companyProfiles);
+        console.log(companyProfiles.name);
     });
 </script>
 
