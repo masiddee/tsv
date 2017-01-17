@@ -4340,6 +4340,52 @@ ul.notifications {
 /** /Dropzone.js **/
 
 /*--------------------CUSTOM--------------------*/
+body {
+  background: #2c2c2c;
+  color: rgba(51,51,51,1);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.4em;
+}
+
+h2 {
+  font-size: 2.1em;
+}
+
+h3 {
+  font-size: 1.7em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+h6 {
+  font-size: .8em;
+}
+
+.left_col, .sidebar-footer, .nav_title {
+  background: #2c2c2c;
+}
+
+.nav.side-menu>li.active>a {
+  background: #464646;
+}
+
+.nav.side-menu>li.current-page, .nav.side-menu>li.active {
+  border-right: 5px solid #d5e14d;
+}
+
 .nav-md .container.body .right_col, .nav-sm .container.body .right_col {
   padding: 10px 0;
 }
@@ -4352,6 +4398,20 @@ ul.notifications {
     padding-bottom: 3px;
     padding-top: 3px;
     font-size: .9em;
+}
+
+a {
+  color: #cccccc;
+}
+
+a:hover {
+  color: #aaaaaa;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+  background: none;
+  font-weight: bold;
+  color: #f58220;
 }
 
 .title_overview {
@@ -4401,7 +4461,7 @@ ul.notifications {
 }
 
 .nav.side-menu > li > a.live, .nav.side-menu > li > a.live:hover, .nav.side-menu > li > a.live:visited, .nav.side-menu > li > a.live:active {
-  color: #149bdf !important;
+  color: #d5e14d !important;
 }
 
 .wizard_horizontal .wizard_steps .step_descr {
