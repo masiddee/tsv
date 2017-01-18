@@ -3953,7 +3953,6 @@ a:hover {
   padding-top: 6px; }
 
 .row .data-container {
-  border: 1px solid black;
   min-height: 280px; }
 
 .site_title {
@@ -4005,7 +4004,7 @@ a:hover {
   font-size: .7em;
   color: #e0e0e0; }
 
-.form-group {
+.impact-containers .form-group {
   text-align: left !important;
   overflow: auto;
   width: 70%;
