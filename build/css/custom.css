@@ -4080,11 +4080,11 @@ a:hover {
 @media (min-width: 768px) {
   .modal-dialog {
     width: 740px;
-    margin: 30px auto; } }
+    margin: 100px auto; } }
 @media (min-width: 992px) {
   .modal-dialog {
     width: 960px;
-    margin: 30px auto; } }
+    margin: 120px auto; } }
 .btn-xl {
   padding: 25px 16px;
   font-size: 22px;

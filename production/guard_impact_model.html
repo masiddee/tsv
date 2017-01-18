@@ -196,24 +196,30 @@
                                         </button>
                                         <h4 class="modal-title" id="myModalLabel">Create Custom Impact Scenario</h4>
                                     </div>
+
+                                    <!--  Impact Model Setup Modal window  -->
                                     <div id="impact-setup" class="modal-body">
                                         <button class="btn btn-default btn-sm impact-reset">Reset</button>
+
+                                        <!--  impact-step1  -->
                                         <div id="impact-step1" class="text-center">
                                             <button type="button" class="btn btn-primary btn-xl btn-impact" data-impact="region-step2">Geographic Region<br/><span>Adjustment to Contract Expenditures</span></button>
-                                            <button type="button" class="btn btn-primary btn-xl btn-impact disabled" data-impact="">Contracts<br/><span>Choose a subset of current contracts</span></button>
-                                            <button type="button" class="btn btn-primary btn-xl btn-impact disabled" data-impact="">Industry<br/><span>Adjustment to Contract Expenditures</span></button>
-                                            <button type="button" class="btn btn-primary btn-xl btn-impact disabled" data-impact="">Program<br/><span>Adjustment to Contract Expenditures</span></button>
-                                            <button type="button" class="btn btn-primary btn-xl btn-impact disabled" data-impact="">Military Installations<br/><span>Adjustment to Service Contracts</span></button>
-                                        </div>
+                                            <button type="button" class="btn btn-primary btn-xl btn-impact disabled" data-impact="contracts-step2">Contracts<br/><span>Choose a subset of current contracts</span></button>
+                                            <button type="button" class="btn btn-primary btn-xl btn-impact" data-impact="industry-step2">Industry<br/><span>Adjustment to Contract Expenditures</span></button>
+                                            <button type="button" class="btn btn-primary btn-xl btn-impact" data-impact="program-step2">Program<br/><span>Adjustment to Contract Expenditures</span></button>
+                                            <button type="button" class="btn btn-primary btn-xl btn-impact" data-impact="installations-step2">Military Installations<br/><span>Adjustment to Service Contracts</span></button>
+                                        </div> <!--  /impact-step1  -->
 
+                                        <!--  impact-region-step2  -->
                                         <div id="impact-region-step2" class="impact-containers text-center hide">
                                             <button type="button" class="btn btn-primary btn-xl disabled">Geographic Region<br/><span>Adjustment to Contract Expenditures</span></button>
                                             <h3>Filter by State, County, or Region:</h3>
                                             <button type="button" class="btn btn-primary btn-lg btn-impact" data-impact="region-state-step3">State</button>
                                             <button type="button" class="btn btn-primary btn-lg btn-impact" data-impact="region-counties-step3">Counties</button>
                                             <button type="button" class="btn btn-primary btn-lg btn-impact" data-impact="region-regions-step3">Regions</button>
-                                        </div>
+                                        </div> <!--  /impact-region-step2  -->
 
+                                        <!--  impact-region-state-step3  -->
                                         <div id="impact-region-state-step3" class="impact-containers text-center hide">
                                             <button type="button" class="btn btn-primary btn-xl disabled">Geographic Region<br/><span>Adjustment to Contract Expenditures</span></button><br/>
                                             <button type="button" class="btn btn-primary btn-lg disabled">States</button>
@@ -276,9 +282,10 @@
                                                     </span>
                                                 </div>
                                             </div>
-                                            <button class="btn btn-sm btn-success">+ Add Adjustment</button>
-                                        </div>
+                                            <button class="btn btn-sm btn-success btn-impact" data-impact="adjustment">+ Add Adjustment</button>
+                                        </div> <!--  /impact-region-state-step3  -->
 
+                                        <!--  impact-region-counties-step3  -->
                                         <div id="impact-region-counties-step3" class="impact-containers text-center hide">
                                             <button type="button" class="btn btn-primary btn-xl disabled">Geographic Region<br/><span>Adjustment to Contract Expenditures</span></button><br/>
                                             <button type="button" class="btn btn-primary btn-lg disabled">Counties</button><br/>
@@ -320,9 +327,10 @@
                                                     </span>
                                                 </div>
                                             </div>
-                                            <button class="btn btn-sm btn-success">+ Add Adjustment</button>
-                                        </div>
+                                            <button class="btn btn-sm btn-success btn-impact" data-impact="adjustment">+ Add Adjustment</button>
+                                        </div><!--  /impact-region-counties-step3  -->
 
+                                        <!--  impact-region-regions-step3  -->
                                         <div id="impact-region-regions-step3" class="impact-containers text-center hide">
                                             <button type="button" class="btn btn-primary btn-xl disabled">Geographic Region<br/><span>Adjustment to Contract Expenditures</span></button><br/>
                                             <button type="button" class="btn btn-primary btn-lg disabled">Regions</button><br/>
@@ -362,9 +370,172 @@
                                                     </span>
                                                 </div>
                                             </div>
-                                            <button class="btn btn-sm btn-success">+ Add Adjustment</button>
-                                        </div>
-                                    </div>
+                                            <button class="btn btn-sm btn-success btn-impact" data-impact="adjustment">+ Add Adjustment</button>
+                                        </div> <!--  /impact-region-regions-step3  -->
+
+                                        <!--  impact-industry-step2  -->
+                                        <div id="impact-industry-step2" class="impact-containers text-center hide">
+                                            <button type="button" class="btn btn-primary btn-xl disabled">Industry<br/><span>Adjustment to Contract Expenditures</span></button>
+                                            <h3>Filter by type of Industry:</h3>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Select Industry</label>
+                                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                                    <select class="select2_single form-control" tabindex="-1">
+                                                        <option></option>
+                                                        <option value="tech">Technology</option>
+                                                        <option value="manufacturing">Manufacturing</option>
+                                                        <option value="engineering">Aerospace/Engineering</option>
+                                                        <option value="service">Service</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <h3>Enter Adjustments in dollars ($) or percentages (%)</h3>
+                                            <div class="input-group col-xs-4 col-xs-offset-4">
+                                                <div class="col-xs-4">
+                                                    <label class="custom-control custom-radio">
+                                                        <input id="impact-industry-dollar" name="adjust-type" type="radio" value="dollar" class="custom-control-input">
+                                                        <span class="custom-control-indicator"></span>
+                                                        <span class="custom-control-description">$</span>
+                                                    </label>
+                                                    <label class="custom-control custom-radio">
+                                                        <input id="impact-industry-percent" name="adjust-type" type="radio" value="percent" class="custom-control-input">
+                                                        <span class="custom-control-indicator"></span>
+                                                        <span class="custom-control-description">%</span>
+                                                    </label>
+                                                </div>
+                                                <div class="input-group col-xs-8">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]"><span class="glyphicon glyphicon-minus"></span></button>
+                                                    </span>
+                                                    <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="100">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]"><span class="glyphicon glyphicon-plus"></span></button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-sm btn-success btn-impact" data-impact="adjustment">+ Add Adjustment</button>
+                                        </div> <!--  /impact-industry-step2  -->
+
+                                        <!--  impact-program-step2  -->
+                                        <div id="impact-program-step2" class="impact-containers text-center hide">
+                                            <button type="button" class="btn btn-primary btn-xl disabled">Program<br/><span>Adjustment to Contract Expenditures</span></button>
+                                            <h3>Filter by type of Program:</h3>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Select Program</label>
+                                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                                    <select class="select2_single form-control" tabindex="-1">
+                                                        <option></option>
+                                                        <option value="prog-a">Program A</option>
+                                                        <option value="prog-b">Program B</option>
+                                                        <option value="prog-c">Program C</option>
+                                                        <option value="prog-d">Program D</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <h3>Enter Adjustments in dollars ($) or percentages (%)</h3>
+                                            <div class="input-group col-xs-4 col-xs-offset-4">
+                                                <div class="col-xs-4">
+                                                    <label class="custom-control custom-radio">
+                                                        <input id="impact-program-dollar" name="adjust-type" type="radio" value="dollar" class="custom-control-input">
+                                                        <span class="custom-control-indicator"></span>
+                                                        <span class="custom-control-description">$</span>
+                                                    </label>
+                                                    <label class="custom-control custom-radio">
+                                                        <input id="impact-program-percent" name="adjust-type" type="radio" value="percent" class="custom-control-input">
+                                                        <span class="custom-control-indicator"></span>
+                                                        <span class="custom-control-description">%</span>
+                                                    </label>
+                                                </div>
+                                                <div class="input-group col-xs-8">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]"><span class="glyphicon glyphicon-minus"></span></button>
+                                                    </span>
+                                                    <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="100">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]"><span class="glyphicon glyphicon-plus"></span></button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-sm btn-success btn-impact" data-impact="adjustment">+ Add Adjustment</button>
+                                        </div> <!--  /impact-program-step2  -->
+
+                                        <!--  impact-installations-step2  -->
+                                        <div id="impact-installations-step2" class="impact-containers text-center hide">
+                                            <button type="button" class="btn btn-primary btn-xl disabled">Military Installations<br/><span>Adjustment to Service Contracts</span></button>
+                                            <h3>Filter by Military Installation:</h3>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Select Military Installation</label>
+                                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                                    <select class="select2_single form-control" tabindex="-1">
+                                                        <option></option>
+                                                        <option value="base-1">Base 1</option>
+                                                        <option value="base-2">Base 2</option>
+                                                        <option value="base-3">Base 3</option>
+                                                        <option value="base-4">Base 4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <h3>Enter Adjustments in dollars ($) or percentages (%)</h3>
+                                            <div class="input-group col-xs-4 col-xs-offset-4">
+                                                <div class="col-xs-4">
+                                                    <label class="custom-control custom-radio">
+                                                        <input id="impact-installations-dollar" name="adjust-type" type="radio" value="dollar" class="custom-control-input">
+                                                        <span class="custom-control-indicator"></span>
+                                                        <span class="custom-control-description">$</span>
+                                                    </label>
+                                                    <label class="custom-control custom-radio">
+                                                        <input id="impact-installations-percent" name="adjust-type" type="radio" value="percent" class="custom-control-input">
+                                                        <span class="custom-control-indicator"></span>
+                                                        <span class="custom-control-description">%</span>
+                                                    </label>
+                                                </div>
+                                                <div class="input-group col-xs-8">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]"><span class="glyphicon glyphicon-minus"></span></button>
+                                                    </span>
+                                                    <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="100">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]"><span class="glyphicon glyphicon-plus"></span></button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-sm btn-success btn-impact" data-impact="adjustment">+ Add Adjustment</button>
+                                        </div> <!--  /impact-installations-step2  -->
+
+                                        <!--  impact-adjustment-summary  -->
+                                        <div id="impact-adjustment-summary" class="impact-containers text-center hide">
+                                            <h3>Adjustment Summary:</h3>
+                                            <div class="col-xs-8 col-xs-offset-2">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-body profile">
+                                                        <table>
+                                                            <tr>
+                                                                <td class="text-right"><span>Scenario Info:</span></td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-right"><span>Scenario Info:</span></td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-right"><span>Scenario Info:</span></td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-right"><span>Scenario Info:</span></td>
+                                                                <td></td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" id="summary-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="Give your scenario a name...">
+                                            </div>
+                                            <button class="btn btn-lg btn-success adjustment" data-adjust-type="impact-installations-step2">Create &amp; Run Scenario</button>
+                                        </div> <!--  /impact-adjustment-summary  -->
+
+                                    </div> <!--  /Impact Model Setup Modal window  -->
                                 </div>
                             </div>
                         </div>
@@ -443,6 +614,7 @@
             });
         </script>
         <!-- /Select2 -->
+
         <script>
             $(document).ready(function () {
                 $("#impact-setup button.btn-impact").on("click",function (e) {
@@ -450,8 +622,12 @@
 
                     $(this).parent().toggleClass("hide");
                     var impactStep = $(this).data("impact");
-                    console.log(impactStep);
-                    $("#impact-" + impactStep).toggleClass("hide");
+
+                    if(impactStep != "adjustment"){
+                        $("#impact-" + impactStep).toggleClass("hide");
+                    }else{
+                        $('#impact-adjustment-summary').toggleClass("hide");
+                    }
                 });
 
                 $('input[type=radio][name=adjust-type]').on("change",function () {
@@ -468,6 +644,12 @@
                     $('#impact-step1').removeClass("hide");
                     $('.impact-containers').addClass("hide");
                 });
+
+                $('.btn.adjustment').on('click',function (e) {
+                    e.preventDefault();
+
+
+                })
 
                 //plugin bootstrap minus and plus: http://bootsnipp.com/snippets/featured/buttons-minus-and-plus-in-input
                 //http://jsfiddle.net/laelitenetwork/puJ6G/
