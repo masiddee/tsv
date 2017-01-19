@@ -4473,14 +4473,14 @@ a:hover {
 @media (min-width: 768px) {
   .modal-dialog {
     width: 740px;
-    margin: 100px auto;
+    margin: 40px auto;
   }
 }
 
 @media (min-width: 992px) {
   .modal-dialog {
     width: 960px;
-    margin: 120px auto;
+    margin: 50px auto;
   }
 }
 
@@ -4503,18 +4503,6 @@ a:hover {
   margin: 10px auto 20px;
 }
 
-//#myViz::after {
-//  background: #FFFFFF;
-//  bottom: ;
-//  content: "";
-//  height: 8px;
-//  left: 23px;
-//  margin-top: 15px;
-//  position: absolute;
-//  right: auto;
-//  width: 8px;
-//  z-index: 1;
-//  -webkit-border-radius: 50%;
-//  -moz-border-radius: 50%;
-//  border-radius: 50%;
-//}
+.profile-panels div.col-xs-4 {
+  min-height: 310px !important;
+}

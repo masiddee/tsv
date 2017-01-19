@@ -200,9 +200,9 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="contact-phone" class="control-label col-md-3 col-sm-3 col-xs-12">Contact Phone:</label>
+                                            <label for="primary-contact-phone" class="control-label col-md-3 col-sm-3 col-xs-12">Primary Contact Phone:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input id="contact-phone" class="form-control col-md-7 col-xs-12" type="text" name="contact-phone">
+                                                <input id="primary-contact-phone" class="form-control col-md-7 col-xs-12" type="text" name="primary-contact-phone">
                                             </div>
                                         </div>
                                     </form>
@@ -243,60 +243,60 @@
                                                     </tr>
                                                     <tr>
                                                         <td class="text-right"><span>Company Name:</span></td>
-                                                        <td></td>
+                                                        <td><span class="submit-summary"></span></td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-right"><span>Address:</span></td>
-                                                        <td></td>
+                                                        <td><span class="submit-summary"></span></td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-right"><span>Website:</span></td>
-                                                        <td></td>
+                                                        <td><span class="submit-summary"></span></td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-right"><span>Company Phone:</span></td>
-                                                        <td></td>
+                                                        <td><span class="submit-summary"></span></td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-right"><span>Company Size:</span></td>
-                                                        <td></td>
+                                                        <td><span class="submit-summary"></span></td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-right"><span>Industry:</span></td>
-                                                        <td></td>
+                                                        <td><span class="submit-summary"></span></td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-right"><span>Type:</span></td>
-                                                        <td></td>
+                                                        <td><span class="submit-summary"></span></td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-right"><span>Primary Contact Name:</span></td>
-                                                        <td></td>
+                                                        <td><span class="submit-summary"></span></td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-right"><span>Email Address:</span></td>
-                                                        <td></td>
+                                                        <td><span class="submit-summary"></span></td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-right"><span>Contact Phone:</span></td>
-                                                        <td></td>
+                                                        <td><span class="submit-summary"></span></td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-right"><span>NAICS:</span></td>
-                                                        <td></td>
+                                                        <td><span class="submit-summary"></span></td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-right"><span>Certifications:</span></td>
-                                                        <td></td>
+                                                        <td><span class="submit-summary"></span></td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-right"><span>PSC Codes:</span></td>
-                                                        <td></td>
+                                                        <td><span class="submit-summary"></span></td>
                                                     </tr>
                                                 </table>
                                             </div>
                                             <div class="panel-footer text-right">
-                                                <a href="#" class="btn btn-success btn-lg">Submit Company Profile</a>
+                                                <a href="#" class="btn btn-success btn-lg" id="submit-company">Submit Company Profile</a>
                                             </div>
                                         </div>
                                     </div>
@@ -376,6 +376,30 @@
                 $('.buttonPrevious').addClass('btn btn-primary');
                 $('.buttonNext').addClass('btn btn-success');
                 //$('.buttonFinish').addClass('btn btn-default');
+
+                $('#submit-company').on('click',function (e) {
+                    e.preventDefault();
+
+                    var companyName = $('input[name="company-name"]').val();
+                    var address = $('input[name="address"]').val();
+                    var website = $('input[name="website"]').val();
+                    var companyPhone = $('input[name="company-phone"]').val();
+                    var companySize = $('input[name="company-size"]').val();
+                    var industry = $('input[name="industry"]').val();
+                    var companyType = $('input[name="company-type"]').val();
+                    var primaryContactName = $('input[name="primary-contact-name"]').val();
+                    var email = $('input[name="email"]').val();
+                    var primaryContactPhone = $('input[name="primary-contact-phone"]').val();
+                    var naics = $('textarea[name="naics-codes"]').val();
+                    var certifications = $('textarea[name="certifications"]').val();
+                    var pcs = $('textarea[name="psc-codes"]').val();
+
+                    var postObj = {cname: companyName, address: address, website: website, cphone: companyPhone, csize: companySize, industry: industry, ctype: companyType, pcname: primaryContactName, email: email, pcphone: primaryContactPhone, naics: naics, certifications: certifications, pcs: pcs};
+
+                    $.post("guard_company_profiles.php", postObj);
+
+                    console.log(postObj);
+                });
             });
         </script>
         <!-- /jQuery Smart Wizard -->

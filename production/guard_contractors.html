@@ -123,61 +123,8 @@
         </div>
 
         <div class="content container-fluid">
-          <div class="row">
-            <div class="col-xs-4">
-              <div class="panel panel-default">
-                <div class="panel-body profile_guard">
-                  <img src="http://placehold.it/150x150" alt="">
-                  <h5>Mansoor's Defense Contractors, Inc.</h5>
-                  <ul>
-                    <li><span>Address:</span> 123 Main Street, Suite 1, Atlanta, GA 30021</li>
-                    <li><span>Phone:</span> 678-340-0284</li>
-                    <li><span>NAICS:</span> 501932, 509104, 204801</li>
-                    <li><span>Certifications:</span> HUBZONE, WQB</li>
-                  </ul>
-                </div>
-                <div class="panel-footer">
-                  <!-- View Profile modal button -->
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">View Profile</button>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-xs-4">
-              <div class="panel panel-default">
-                <div class="panel-body profile_guard">
-                  <img src="http://placehold.it/150x150" alt="">
-                  <h5>Company Name</h5>
-                  <ul>
-                    <li><span>Address:</span></li>
-                    <li><span>Phone:</span></li>
-                    <li><span>NAICS:</span></li>
-                    <li><span>Certifications:</span></li>
-                  </ul>
-                </div>
-                <div class="panel-footer">
-                  <a href="#" class="btn btn-default">View Profile</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-xs-4">
-              <div class="panel panel-default">
-                <div class="panel-body profile_guard">
-                  <img src="http://placehold.it/150x150" alt="">
-                  <h5>Company Name</h5>
-                  <ul>
-                    <li><span>Address:</span></li>
-                    <li><span>Phone:</span></li>
-                    <li><span>NAICS:</span></li>
-                    <li><span>Certifications:</span></li>
-                  </ul>
-                </div>
-                <div class="panel-footer">
-                  <a href="#" class="btn btn-default">View Profile</a>
-                </div>
-              </div>
-            </div>
+          <div class="row profile-panels">
+            <!-- Profile panels dynamically generated here from xml file -->
           </div>
         </div>
 
@@ -189,7 +136,7 @@
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
                 </button>
-                <h4 class="modal-title" id="myModalLabel">Mansoor's Defense Contractors, Inc.</h4>
+                <h3 class="modal-title" id="myModalLabel"></h3>
               </div>
               <div class="modal-body">
                 <div class="row">
@@ -198,10 +145,12 @@
                       <img src="http://placehold.it/150x150" alt="">
 
                       <ul>
-                        <li><span>Address:</span> Atlanta, GA 30021 Atlanta, GA 30021</li>
-                        <li><span>Phone:</span> 678-340-0284</li>
-                        <li><span>NAICS:</span> 501932, 509104, 204801</li>
-                        <li><span>Certifications:</span> HUBZONE, WQB</li>
+                        <li class="profile-modal-address"></li>
+                        <li class="profile-modal-city"></li>
+                        <li class="profile-modal-state"></li>
+                        <li class="profile-modal-zipcode"></li>
+                        <li class="profile-modal-phone"></li>
+                        <li class="profile-modal-naics"></li>
                       </ul>
                     </div>
                     <a href="mailto:email@test.com" class="btn btn-success" type="button">Contact Profile</a>
@@ -261,10 +210,10 @@
                           </tbody>
                         </table>
                       </div>
-                      <div class="tab-pane active" id="pane2">
+                      <div class="tab-pane" id="pane2">
                         <p>This is Pane 2</p>
                       </div>
-                      <div class="tab-pane active" id="pane3">
+                      <div class="tab-pane" id="pane3">
                         <p>This is Pane 3</p>
                       </div>
                     </div>
@@ -335,6 +284,7 @@
 <script>
     // Pull Contractors company info from XML file and populate profile information
     $(document).ready(function() {
+
         var companyProfiles = {};
 
         $.ajax({
@@ -343,23 +293,57 @@
             cache: false,
             dataType: "xml",
             success: function(xml) {
-                $(xml).find('company').each(function () {
+                $(xml).find('company').each(function (data) {
+                    companyProfiles.id = $(this).find('dunsnumber').text();
+                    companyProfiles.name = $(this).find('vendorname').text();
+                    var address = $(this).find('streetaddress').text();
+                    var city = $(this).find('city').text();
+                    var state = $(this).find('state').text();
+                    var zipcode = $(this).find('zipcode').text();
+                    var phone = $(this).find('phoneno').text();
+                    var naics = $(this).find('naics_codes').text();
 
-//                    $.each(this, function (i, attribute) {
-//                        companyProfiles.name = attribute.name;
-//                        companyProfiles.address = attribute.address;
-//                        companyProfiles.phone = attribute.phone;
-//                        companyProfiles.naics = attribute.naics;
-//                        companyProfiles.certs = attribute.certs;
-//                    });
+                    var profilePanel = '<div class="col-xs-4"><div class="panel panel-default"><div class="panel-body profile_guard">';
+                        profilePanel += '<img src="http://placehold.it/150x150" alt="">';
+                        profilePanel += '<h4>' + companyProfiles.name + '</h4><ul>';
+                        profilePanel += '<li><span>Address:</span> ' + address + '</li>';
+                        profilePanel += '<li><span>City:</span> ' + city + '</li>';
+                        profilePanel += '<li><span>State:</span> ' + state + '</li>';
+                        profilePanel += '<li><span>Zipcode:</span> ' + zipcode + '</li>';
+                        profilePanel += '<li><span>Phone:</span> ' + phone + '</li>';
+                        profilePanel += '<li><span>NAICS:</span> ' + naics + '</li>';
+                        profilePanel += '</ul></div><div class="panel-footer">';
+                        profilePanel += '<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg" data-dunsnumber="' + companyProfiles.id + '">View Profile</button>';
+                        profilePanel += '</div></div></div>';
+
+                        $('.row.profile-panels').append(profilePanel);
+                    //console.log(name);
                 });
             },
             error: function () {
                 alert("The XML file could not be processed correctly.");
             }
         });
-        // NEEDS WORK -- currently only pulling in the last company from the XML file
-        console.log(companyProfiles.name);
+
+        $('.row.profile-panels').on('click','button',function () {
+            var companyProfile = $(this).data('dunsnumber');
+
+            var viewProfileName = $(this).parent().siblings().find('h4').text();
+            var viewProfileAddress = $(this).parent().siblings().find('ul li:nth-child(1)').html();
+            var viewProfileCity = $(this).parent().siblings().find('ul li:nth-child(2)').html();
+            var viewProfileState = $(this).parent().siblings().find('ul li:nth-child(3)').html();
+            var viewProfileZipcode = $(this).parent().siblings().find('ul li:nth-child(4)').html();
+            var viewProfilePhone = $(this).parent().siblings().find('ul li:nth-child(5)').html();
+            var viewProfileNaics = $(this).parent().siblings().find('ul li:nth-child(6)').html();
+
+            $('.modal-title').html(viewProfileName);
+            $('.profile-modal-address').html(viewProfileAddress);
+            $('.profile-modal-city').html(viewProfileCity);
+            $('.profile-modal-state').html(viewProfileState);
+            $('.profile-modal-zipcode').html(viewProfileZipcode);
+            $('.profile-modal-phone').html(viewProfilePhone);
+            $('.profile-modal-naics').html(viewProfileNaics);
+        })
     });
 </script>
 
