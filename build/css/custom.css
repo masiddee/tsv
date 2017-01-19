@@ -344,11 +344,11 @@ body {
 
 .page-title {
   width: 100%;
-  height: 65px;
+  height: 90px;
   padding: 10px 0; }
 
 .page-title .title_left {
-  width: 45%;
+  width: 30%;
   float: left;
   display: block; }
 
@@ -356,8 +356,8 @@ body {
   margin: 9px 0; }
 
 .page-title .title_right {
-  width: 55%;
-  float: left;
+  width: 70%;
+  float: right;
   display: block; }
 
 .page-title .title_right .pull-right {
@@ -4012,6 +4012,9 @@ a:hover {
 
 .profile-panels div.col-xs-4 {
   min-height: 310px !important; }
+
+#v1, #v1_2, #v2, #v3, #v4 {
+  width: 100%; }
 
 .daterangepicker .ranges li {
   color: #73879C; }

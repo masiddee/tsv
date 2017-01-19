@@ -49,7 +49,7 @@
             <ul class="nav side-menu">
               <li><a href="guard_overview.html"><i class="fa fa-binoculars"></i>Overview</a></li>
               <li><a href="guard_impact_model.html"><i class="fa fa-bar-chart"></i>Economic Impact</a></li>
-              <li class="current-page"><a href="#"><i class="fa fa-briefcase"></i>Georgia Contractors</a></li>
+              <li class="current-page"><a href="#" class="live"><i class="fa fa-briefcase"></i>Georgia Contractors</a></li>
             </ul>
           </div>
           <div class="menu_section">
@@ -106,8 +106,8 @@
 
         <!-- top tiles -->
         <div class="container-fluid">
-          <div class="title_overview">
-            <h1 class="text-right">Georgia Department of Defense Contractors</h1>
+          <div class="page-title">
+            <h1 class="title_right text-right">Georgia Department of Defense Contractors</h1>
           </div>
           <div class="row">
             <div class="col-xs-4">
@@ -325,8 +325,10 @@
             }
         });
 
-        $('.row.profile-panels').on('click','button',function () {
-            var companyProfile = $(this).data('dunsnumber');
+        $('.row.profile-panels').on('click','button',function (e) {
+            e.preventDefault();
+
+            var companyProfileId = $(this).data('dunsnumber');
 
             var viewProfileName = $(this).parent().siblings().find('h4').text();
             var viewProfileAddress = $(this).parent().siblings().find('ul li:nth-child(1)').html();
@@ -343,6 +345,44 @@
             $('.profile-modal-zipcode').html(viewProfileZipcode);
             $('.profile-modal-phone').html(viewProfilePhone);
             $('.profile-modal-naics').html(viewProfileNaics);
+
+
+            $.ajax({
+                type: 'GET',
+                url: 'guard_contracts.xml',
+                cache: false,
+                dataType: 'xml',
+                success: function (xml) {
+                    $(xml).find('Contract').each(function () {
+                        if(companyProfileId === $(this).find('dunsnumber').text()){
+                            var transId = $(this).find('unique_transaction_id').text();
+                            var majFundId = $(this).find('maj_fund_agency_cat_id').text();
+                            var majFund = $(this).find('maj_fund_agency_cat').text();
+                            var fy = $(this).find('fiscal_year').text();
+                            var id = $(this).find('dunsnumber').text();
+                            var parentId = $(this).find('parentdunsnumber').text();
+                            var vendName = $(this).find('vendorname').text();
+                            var address = $(this).find('streetaddress').text();
+                            var contCity = $(this).find('city').text();
+                            var contState = $(this).find('state').text();
+                            var zip = $(this).find('zipcode').text();
+                            var signedDate = $(this).find('signeddate').text();
+                            var effDate = $(this).find('effectivedate').text();
+                            var currCompletionDate = $(this).find('currentcompletiondate').text();
+                            var dolObligated = $(this).find('dollarsobligated').text();
+                            var perfCity = $(this).find('placeofperformancecity').text();
+                            var stateCode = $(this).find('pop_state_code').text();
+                            var pNaicsCode = $(this).find('principalnaicscode').text();
+                            var descRequirement = $(this).find('descriptionofcontractrequirement').text();
+
+                            var contractRow = '';
+                        }
+                    });
+                },
+                error: function () {
+                    alert("The XML file could not be processed correctly.");
+                }
+            });
         })
     });
 </script>

@@ -47,7 +47,7 @@
                         <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
                             <div class="menu_section">
                                 <ul class="nav side-menu">
-                                    <li class="current-page"><a href="#" class="live"><i class="fa fa-binoculars"></i>Overview</a></li>
+                                    <li class="current-page"><a href="#"><i class="fa fa-binoculars"></i>Overview</a></li>
                                     <li><a href="guard_impact_model.html"><i class="fa fa-bar-chart"></i>Economic Impact</a></li>
                                     <li><a href="guard_contractors.html"><i class="fa fa-briefcase"></i>Georgia Contractors</a></li>
                                 </ul>
@@ -106,21 +106,21 @@
 
 						<!-- top tiles -->
 						<div class="container-fluid">
-							<div class="page-title">
-								<h1 class="title_right text-right">Overview -- Department of Defense Procurement in Georgia</h1>
+							<div class="title_overview">
+								<h1 class="text-right">Overview -- Department of Defense Spending in Georgia</h1>
 							</div>
                             <ul class="nav nav-tabs nav-justified">
-                                <li class="active"><a href="#procurement-pane" data-toggle="tab" id="b1">Defense Procurement</a></li>
-                                <li class=""><a href="#contractors-pane" data-toggle="tab" id="b2">Defense Contractors</a></li>
-                                <li class=""><a href="#installations-pane" data-toggle="tab" id="b3">Georgia Military Installations</a></li>
-                                <li class=""><a href="#biz-dynamics-pane" data-toggle="tab" id="b4">Georgia DoD Business Dynamics</a></li>
+                                <li class="active"><a href="#pane1" id="b1" data-toggle="tab">Defense Spending</a></li>
+                                <li class=""><a href="#pane2" id="b2" data-toggle="tab">Defense Contractors</a></li>
+                                <li class=""><a href="#pane3" id="b3" data-toggle="tab">Military Installations</a></li>
+                                <li class=""><a href="#pane4" id="b4" data-toggle="tab">In-State vs. Out of State Spending Flow</a></li>
                             </ul>
 						</div>
 
 						<div class="content container-fluid">
                             <div class="tab-content">
-                                <div id="procurement-pane" class="tab-pane active">
-                                    <h3>DEPARTMENT OF DEFENSE PROCUREMENT</h3>
+                                <div id="pane1" class="tab-pane active">
+                                    <h3>DEFENSE CONTRACT SPENDING, NATIONALLY VS. GEORGIA</h3>
                                     <div class="btn-group" role="group">
                                         <button type="button" class="btn btn-default btn-xs" data-toggle="tab">Contract Spending</button>
                                         <button type="button" class="btn btn-default btn-xs" data-toggle="tab">Employment</button>
@@ -128,17 +128,17 @@
                                     <div class="row">
                                         <div class="col-xs-9">
                                             <ul class="nav nav-pills nav-justified">
-                                                <li class="active"><a href="#sub-procurement-pane1" data-toggle="tab">Defense Procurement -- National vs. Georgia</a></li>
-                                                <li class=""><a href="#sub-procurement-pane2" data-toggle="tab" id="b1_2">Defense Procurement in Georgia</a></li>
+                                                <li class="active"><a href="#sub-pane1" data-toggle="tab">Defense Procurement -- National vs. Georgia</a></li>
+                                                <li class=""><a href="#sub-pane2" id="b1_2" data-toggle="tab">Defense Procurement in Georgia</a></li>
                                             </ul>
 
                                             <div class="tab-content">
-                                                <div id="sub-procurement-pane1" class="data-container tab-pane active">
+                                                <div id="sub-pane1" class="data-container tab-pane active">
                                                     <!-- Tableau Dashboard guard-eim-overview-1: db-natl-vs-ga & db-ga-regions-counties -->
-                                                    <div id="v1"></div>
+                                                    <div id="v1" style="width: 100%"></div>
                                                 </div>
-                                                <div id="sub-procurement-pane2" class="data-container tab-pane">
-                                                    <div id="v1_2"></div>
+                                                <div id="sub-pane2" class="data-container tab-pane">
+                                                    <div id="v1_2" style="width: 100%"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -151,12 +151,12 @@
                                     </div>
                                 </div>
 
-                                <div id="contractors-pane" class="tab-pane">
+                                <div id="pane2" class="tab-pane">
                                     <h3>DEPARTMENT OF DEFENSE CONTRACTORS IN GEORGIA</h3>
                                     <div class="row">
                                         <div class="col-xs-8">
-                                            <div class="data-container">
-                                                <div id="v2"></div>
+                                            <div id="v2" class="data-container" style="width:100%;">
+
                                             </div>
                                         </div>
                                         <div class="col-xs-4">
@@ -175,12 +175,12 @@
                                     </div>
                                 </div>
 
-                                <div id="installations-pane" class="tab-pane">
+                                <div id="pane3" class="tab-pane">
                                     <h3>GEORGIA MILITARY INSTALLATIONS</h3>
                                     <div class="row">
                                         <div class="col-xs-12">
-                                            <div class="data-container">
-                                                <div id="v3"></div>
+                                            <div id="v3" class="data-container">
+
                                             </div>
                                         </div>
                                     </div>
@@ -193,12 +193,12 @@
                                     </div>
                                 </div>
 
-                                <div id="biz-dynamics-pane" class="tab-pane">
+                                <div id="pane4" class="tab-pane">
                                     <h3>COUNTY-TO-COUNTY DEFENSE SPENDING</h3>
                                     <div class="row">
                                         <div class="col-xs-8">
-                                            <div class="data-container">
-                                                <div id="v4"></div>
+                                            <div id="v4" class="data-container">
+
                                             </div>
                                         </div>
                                         <div class="col-xs-4">

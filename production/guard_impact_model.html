@@ -50,7 +50,7 @@
                             <div class="menu_section">
                                 <ul class="nav side-menu">
                                     <li><a href="guard_overview.html"><i class="fa fa-binoculars"></i>Overview</a></li>
-                                    <li class="current-page"><a href="#"><i class="fa fa-bar-chart"></i>Economic Impact</a></li>
+                                    <li class="current-page"><a href="#" class="live"><i class="fa fa-bar-chart"></i>Economic Impact</a></li>
                                     <li><a href="guard_contractors.html"><i class="fa fa-briefcase"></i>Georgia Contractors</a></li>
                                 </ul>
                             </div>
@@ -108,14 +108,18 @@
 
 						<!-- top tiles -->
 						<div class="container-fluid">
-							<div class="title_overview">
-								<h1 class="text-right">Georgia Department of Defense Economic Impact Model</h1>
+							<div class="page-title">
+								<h1 class="title_right text-right">Georgia Department of Defense Economic Impact Model</h1>
+                                <div class="title_left">
+                                    <button type="button" class="btn btn-success" data-toggle="modal" data-target=".bs-example-modal-lg">Create Impact Scenario</button>
+                                </div>
 							</div>
                             <ul class="nav nav-tabs nav-justified">
                                 <li class="active"><a href="#pane1" data-toggle="tab">Defense Spending Dynamic</a></li>
                                 <li class=""><a href="#pane2" data-toggle="tab">Defense Contractors</a></li>
                                 <li class=""><a href="#pane3" data-toggle="tab">Military Installations</a></li>
                                 <li class=""><a href="#pane4" data-toggle="tab">Business Dynamics</a></li>
+                                <li class=""><a href="#pane5" data-toggle="tab">Impact Prioritization</a></li>
                             </ul>
 						</div>
 
@@ -124,9 +128,6 @@
                                 <div id="pane1" class="tab-pane active">
                                     <div class="col-xs-9">
                                         <h3>GEORGIA DEPARTMENT OF DEFENSE BUSINESS DYNAMICS</h3>
-                                    </div>
-                                    <div class="col-xs-3 text-right">
-                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Create Impact Scenario</button>
                                     </div>
                                     <div class="row">
                                         <div class="col-xs-12">
@@ -141,9 +142,6 @@
                                     <div class="col-xs-9">
                                         <h3>DEPARTMENT OF DEFENSE CONTRACTORS</h3>
                                     </div>
-                                    <div class="col-xs-3 text-right">
-                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Create Impact Scenario</button>
-                                    </div>
                                     <div class="row">
                                         <div class="col-xs-12">
                                             <div class="data-container">
@@ -156,9 +154,6 @@
                                 <div id="pane3" class="tab-pane">
                                     <div class="col-xs-9">
                                         <h3>GEORGIA MILITARY INSTALLATIONS</h3>
-                                    </div>
-                                    <div class="col-xs-3 text-right">
-                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Create Impact Scenario</button>
                                     </div>
                                     <div class="row">
                                         <div class="col-xs-12">
@@ -173,8 +168,18 @@
                                     <div class="col-xs-9">
                                         <h3>GEORGIA DEPARTMENT OF DEFENSE BUSINESS DYNAMICS</h3>
                                     </div>
-                                    <div class="col-xs-3 text-right">
-                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Create Impact Scenario</button>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div class="data-container">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="pane5" class="tab-pane">
+                                    <div class="col-xs-9">
+                                        <h3>IMPACT PRIORITIZATION</h3>
                                     </div>
                                     <div class="row">
                                         <div class="col-xs-12">
