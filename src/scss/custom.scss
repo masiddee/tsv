@@ -356,7 +356,7 @@ body {
   padding: 10px 0;
 }
 .page-title .title_left {
-  width: 30%;
+  width: 20%;
   float: left;
   display: block;
 }
@@ -364,7 +364,7 @@ body {
   margin: 9px 0;
 }
 .page-title .title_right {
-  width: 70%;
+  width: 80%;
   float: right;
   display: block;
 }
@@ -4509,4 +4509,14 @@ a:hover {
 
 #v1, #v1_2, #v2, #v3, #v4 {
   width: 100%;
+}
+
+.tab-pane table {
+  height: 250px;
+  overflow-y: scroll;
+  display: block;
+}
+
+.table-container-full {
+  overflow-x: auto;
 }

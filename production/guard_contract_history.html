@@ -61,6 +61,7 @@
                             <li><a href="guard_submit_info.html"><i class="fa fa-edit"></i>Submit Company Information</a></li>
                             <li><a href="guard_data_download.html"><i class="fa fa-cloud-download"></i>Data Download Center</a></li>
                             <li><a href="guard_industry_calendar.html"><i class="fa fa-calendar"></i>Industry Event Calendar</a></li>
+                            <li><a href="guard_other_viz.html"><i class="fa fa-glide"></i>Other Visualizations</a></li>
                         </ul>
                     </div>
                 </div>
@@ -109,41 +110,39 @@
                     <div class="page-title">
                         <h1 class="title_right text-right">GEORGIA DEPARTMENT OF DEFENSE CONTRACT HISTORY</h1>
                     </div>
-                    <ul class="nav nav-pills nav-justified">
-                        <li class="active"><a href="#pane1" data-toggle="tab">TEXT</a></li>
-                        <li class=""><a href="#pane2" data-toggle="tab">TEXT</a></li>
-                    </ul>
                 </div>
 
                 <div class="content container-fluid">
-                    <div class="tab-content">
-                        <div id="pane1" class="tab-pane active">
-                            <h3>TEXT</h3>
-                            <div class="row">
-                                <div class="col-xs-9">
-                                    <p>text text text text text text text text text text text text text text text text text text</p>
-                                </div>
-                                <div class="col-xs-3">
-                                    <div class="data-container">
-                                        <p>text text text text text text text text text text text text text text text text text text</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="row">
+                        <div class="col-xs-12 table-container-full">
+                            <table id="contract-history-table" class="table table-hover table-striped">
+                                <thead>
+                                <tr>
+                                    <th>Transaction ID</th>
+                                    <th>Major Funding Agency Cat ID</th>
+                                    <th>Major Funding Agency Cat</th>
+                                    <th>Fiscal Year</th>
+                                    <th>Duns Number</th>
+                                    <th>Parent Duns Number</th>
+                                    <th>Vendor Name</th>
+                                    <th>Street Address</th>
+                                    <th>City</th>
+                                    <th>State</th>
+                                    <th>Zipcode</th>
+                                    <th>Signed Date</th>
+                                    <th>Effective Date</th>
+                                    <th>Current Completion Date</th>
+                                    <th>Dollars Obligated</th>
+                                    <th>Place of Performance City</th>
+                                    <th>POP State Code</th>
+                                    <th>Principle NAICS Code</th>
+                                    <th>Description of Contract REquirements</th>
+                                </tr>
+                                </thead>
+                                <tbody>
 
-                        <div id="pane2" class="tab-pane">
-                            <h3>DEPARTMENT OF DEFENSE CONTRACTORS IN GEORGIA</h3>
-                            <div class="row">
-                                <div class="col-xs-8">
-                                    <p>text text text text text text text text text text text text text text text text text text</p>
-                                </div>
-                                <div class="col-xs-4">
-                                    <div class="data-container">
-                                        <p>text text text text text text text text text text text text text text text text text text</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -154,9 +153,6 @@
 
         <!-- footer content -->
         <footer>
-            <div class="pull-right">
-
-            </div>
             <div class="clearfix"></div>
         </footer>
         <!-- /footer content -->
@@ -166,30 +162,6 @@
 <script src="../vendors/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap -->
 <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- FastClick -->
-<script src="../vendors/fastclick/lib/fastclick.js"></script>
-<!-- NProgress -->
-<script src="../vendors/nprogress/nprogress.js"></script>
-<!-- Chart.js -->
-<script src="../vendors/Chart.js/dist/Chart.min.js"></script>
-<!-- gauge.js -->
-<script src="../vendors/gauge.js/dist/gauge.min.js"></script>
-<!-- bootstrap-progressbar -->
-<script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-<!-- iCheck -->
-<script src="../vendors/iCheck/icheck.min.js"></script>
-<!-- Skycons -->
-<script src="../vendors/skycons/skycons.js"></script>
-<!-- Flot -->
-<script src="../vendors/Flot/jquery.flot.js"></script>
-<script src="../vendors/Flot/jquery.flot.pie.js"></script>
-<script src="../vendors/Flot/jquery.flot.time.js"></script>
-<script src="../vendors/Flot/jquery.flot.stack.js"></script>
-<script src="../vendors/Flot/jquery.flot.resize.js"></script>
-<!-- Flot plugins -->
-<script src="../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-<script src="../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
-<script src="../vendors/flot.curvedlines/curvedLines.js"></script>
 <!-- DateJS -->
 <script src="../vendors/DateJS/build/date.js"></script>
 <!-- JQVMap -->
@@ -201,8 +173,65 @@
 <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
 <!-- Custom Theme Scripts -->
 <script src="../build/js/custom.min.js"></script>
-<!-- Tableau JS -->
-<script src="https://public.tableau.com/javascripts/api/tableau-2.js"></script>
-<script src="../build/js/tableau.js"></script>
+<script>
+    $(document).ready(function() {
+        $.ajax({
+            type: 'GET',
+            url: 'guard_contracts.xml',
+            cache: false,
+            dataType: 'xml',
+            success: function (xml) {
+                $(xml).find('Contract').each(function (i) {
+                    var transId = $(this).find('unique_transaction_id').text();
+                    var majFundId = $(this).find('maj_fund_agency_cat_id').text();
+                    var majFund = $(this).find('maj_fund_agency_cat').text();
+                    var fy = $(this).find('fiscal_year').text();
+                    var id = $(this).find('dunsnumber').text();
+                    var parentId = $(this).find('parentdunsnumber').text();
+                    var vendName = $(this).find('vendorname').text();
+                    var address = $(this).find('streetaddress').text();
+                    var contCity = $(this).find('city').text();
+                    var contState = $(this).find('state').text();
+                    var zip = $(this).find('zipcode').text();
+                    var signedDate = $(this).find('signeddate').text();
+                    var effDate = $(this).find('effectivedate').text();
+                    var currCompletionDate = $(this).find('currentcompletiondate').text();
+                    var dolObligated = $(this).find('dollarsobligated').text();
+                    var perfCity = $(this).find('placeofperformancecity').text();
+                    var stateCode = $(this).find('pop_state_code').text();
+                    var pNaicsCode = $(this).find('principalnaicscode').text();
+                    var descRequirement = $(this).find('descriptionofcontractrequirement').text();
+
+                    var contractRow = '<tr>';
+                    contractRow += '<td>' + transId + '</td>';
+                    contractRow += '<td>' + majFundId + '</td>';
+                    contractRow += '<td>' + majFund + '</td>';
+                    contractRow += '<td>' + fy + '</td>';
+                    contractRow += '<td>' + id + '</td>';
+                    contractRow += '<td>' + parentId + '</td>';
+                    contractRow += '<td>' + vendName + '</td>';
+                    contractRow += '<td>' + address + '</td>';
+                    contractRow += '<td>' + contCity + '</td>';
+                    contractRow += '<td>' + contState + '</td>';
+                    contractRow += '<td>' + zip + '</td>';
+                    contractRow += '<td>' + signedDate + '</td>';
+                    contractRow += '<td>' + effDate + '</td>';
+                    contractRow += '<td>' + currCompletionDate + '</td>';
+                    contractRow += '<td>' + dolObligated + '</td>';
+                    contractRow += '<td>' + perfCity + '</td>';
+                    contractRow += '<td>' + stateCode + '</td>';
+                    contractRow += '<td>' + pNaicsCode + '</td>';
+                    contractRow += '<td>' + descRequirement + '</td>';
+                    contractRow += '</tr>';
+
+                    $('#contract-history-table tbody').append(contractRow);
+                });
+            },
+            error: function () {
+                alert("The XML file could not be processed correctly.");
+            }
+        });
+    });
+</script>
 </body>
 </html>
