@@ -177,11 +177,27 @@
 
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 class="modal-title" id="myModalLabel2">Edit Calendar Entry</h4>
+                <h3 class="modal-title" id="myModalLabel2">Event Details</h3>
             </div>
             <div class="modal-body">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <table class="col-xs-6 col-xs-offset-3">
+                            <tbody>
+                                <tr>
+                                    <td><h4>Event Title:</h4></td>
+                                    <td><span id="title2"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><h4>Event Date/Time:</h4></td>
+                                    <td><span></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
 
-                <div id="testmodal2" style="padding: 5px 20px;">
+                <!-- <div id="testmodal2" style="padding: 5px 20px;">
                     <form id="antoform2" class="form-horizontal calender" role="form">
                         <div class="form-group">
                             <label class="col-sm-3 control-label">Title</label>
@@ -197,11 +213,11 @@
                         </div>
 
                     </form>
-                </div>
+                </div> -->
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default antoclose2" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary antosubmit2">Save changes</button>
+                <button type="button" class="btn btn-primary antosubmit2">Email Event</button>
             </div>
         </div>
     </div>
@@ -250,37 +266,37 @@
                 started = start;
                 ended = end;
 
-                $(".antosubmit").on("click", function() {
-                    var title = $("#title").val();
-                    if (end) {
-                        ended = end;
-                    }
-
-                    categoryClass = $("#event_type").val();
-
-                    if (title) {
-                        calendar.fullCalendar('renderEvent', {
-                                title: title,
-                                start: started,
-                                end: end,
-                                allDay: allDay
-                            },
-                            true // make the event "stick"
-                        );
-                    }
-
-                    $('#title').val('');
-
-                    calendar.fullCalendar('unselect');
-
-                    $('.antoclose').click();
-
-                    return false;
-                });
+//                $(".antosubmit").on("click", function() {
+//                    var title = $("#title").val();
+//                    if (end) {
+//                        ended = end;
+//                    }
+//
+//                    categoryClass = $("#event_type").val();
+//
+//                    if (title) {
+//                        calendar.fullCalendar('renderEvent', {
+//                                title: title,
+//                                start: started,
+//                                end: end,
+//                                allDay: allDay
+//                            },
+//                            true // make the event "stick"
+//                        );
+//                    }
+//
+//                    $('#title').val('');
+//
+//                    calendar.fullCalendar('unselect');
+//
+//                    $('.antoclose').click();
+//
+//                    return false;
+//                });
             },
             eventClick: function(calEvent, jsEvent, view) {
                 $('#fc_edit').click();
-                $('#title2').val(calEvent.title);
+                $('#title2').html(calEvent.title);
 
                 categoryClass = $("#event_type").val();
 

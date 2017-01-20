@@ -121,7 +121,7 @@
 						<div class="content container-fluid">
                             <div class="tab-content">
                                 <div id="procurement-pane" class="tab-pane active">
-                                    <h3>DEPARTMENT OF DEFENSE PROCUREMENT</h3>
+                                    <h3>DEPARTMENT OF DEFENSE PROCUREMENT <button class="btn btn-default btn-sm" data-toggle="modal" data-target=".bs-example-modal-lg">Share</button></h3>
                                     <div class="btn-group" role="group">
                                         <button type="button" class="btn btn-default btn-xs" data-toggle="tab">Contract Spending</button>
                                         <button type="button" class="btn btn-default btn-xs" data-toggle="tab">Employment</button>
@@ -153,7 +153,7 @@
                                 </div>
 
                                 <div id="contractors-pane" class="tab-pane">
-                                    <h3>DEPARTMENT OF DEFENSE CONTRACTORS IN GEORGIA</h3>
+                                    <h3>DEPARTMENT OF DEFENSE CONTRACTORS IN GEORGIA <button class="btn btn-default btn-sm" data-toggle="modal" data-target=".bs-example-modal-lg">Share</button></h3>
                                     <div class="row">
                                         <div class="col-xs-9">
                                             <div class="data-container">
@@ -178,7 +178,7 @@
                                 </div>
 
                                 <div id="installations-pane" class="tab-pane">
-                                    <h3>GEORGIA MILITARY INSTALLATIONS</h3>
+                                    <h3>GEORGIA MILITARY INSTALLATIONS <button class="btn btn-default btn-sm" data-toggle="modal" data-target=".bs-example-modal-lg">Share</button></h3>
                                     <div class="row">
                                         <div class="col-xs-9">
                                             <ul class="nav nav-pills nav-justified">
@@ -204,7 +204,7 @@
                                 </div>
 
                                 <div id="biz-dynamics-pane" class="tab-pane">
-                                    <h3>COUNTY-TO-COUNTY DEFENSE SPENDING</h3>
+                                    <h3>COUNTY-TO-COUNTY DEFENSE SPENDING <button class="btn btn-default btn-sm" data-toggle="modal" data-target=".bs-example-modal-lg">Share</button></h3>
                                     <div class="row">
                                         <div class="col-xs-9">
                                             <ul class="nav nav-pills nav-justified">
@@ -231,6 +231,48 @@
                                 </div>
                             </div>
 						</div>
+
+                        <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+                                        </button>
+                                        <h4 class="modal-title" id="myModalLabel">Share this Dashboard</h4>
+                                    </div>
+
+                                    <!--  Impact Model Setup Modal window  -->
+                                    <div class="modal-body">
+                                        <div class="panel panel-default">
+                                            <div class="panel-body">
+
+                                                <ul class="nav nav-tabs nav-justified">
+                                                    <li class="active"><a href="#social" data-toggle="tab">SOCIAL</a></li>
+                                                    <li class=""><a href="#email" data-toggle="tab">EMAIL</a></li>
+                                                    <li class=""><a href="#embed" data-toggle="tab">EMBED</a></li>
+                                                </ul>
+
+                                                <div class="tab-content">
+                                                    <div id="social" class="tab-pane active text-center">
+                                                        <span><i class="fa fa-facebook-square"></i><i class="fa fa-twitter-square"></i><i class="fa fa-linkedin-square"></i></span>
+                                                    </div>
+                                                    <div id="email" class="tab-pane">
+
+                                                    </div>
+                                                    <div id="embed" class="tab-pane">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel-footer text-right">
+                                                <button class="btn btn-primary btn-lg">Share</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
 					</div>
 				</div>

@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c8169dc-e3a9-4135-bfa9-1b9ebaf2cbf3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/production/guard_overview1.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/css/custom.css" afterPath="$PROJECT_DIR$/build/css/custom.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/css/custom.min.css" afterPath="$PROJECT_DIR$/build/css/custom.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/production/guard_active_opportunities.html" afterPath="$PROJECT_DIR$/production/guard_active_opportunities.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/production/guard_contract_history.html" afterPath="$PROJECT_DIR$/production/guard_contract_history.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/production/guard_contractors.html" afterPath="$PROJECT_DIR$/production/guard_contractors.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/production/guard_data_download.html" afterPath="$PROJECT_DIR$/production/guard_data_download.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/production/guard_impact_model.html" afterPath="$PROJECT_DIR$/production/guard_impact_model.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/production/guard_industry_calendar.html" afterPath="$PROJECT_DIR$/production/guard_industry_calendar.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/production/guard_overview.html" afterPath="$PROJECT_DIR$/production/guard_overview.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/production/guard_submit_info.html" afterPath="$PROJECT_DIR$/production/guard_submit_info.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scss/custom.scss" afterPath="$PROJECT_DIR$/src/scss/custom.scss" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -35,18 +28,18 @@
       <file leaf-file-name="custom.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scss/custom.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="366" column="10" lean-forward="false" selection-start-line="366" selection-start-column="10" selection-end-line="366" selection-end-column="10" />
+            <state relative-caret-position="612">
+              <caret line="4524" column="14" lean-forward="false" selection-start-line="4524" selection-start-column="14" selection-end-line="4524" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="guard_data_download.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/production/guard_data_download.html">
+      <file leaf-file-name="guard_contractors.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/production/guard_contractors.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="119" column="34" lean-forward="false" selection-start-line="117" selection-start-column="28" selection-end-line="119" selection-end-column="34" />
+            <state relative-caret-position="231">
+              <caret line="292" column="133" lean-forward="false" selection-start-line="292" selection-start-column="62" selection-end-line="292" selection-end-column="133" />
               <folding>
                 <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -56,25 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="guard_other_viz.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/production/guard_other_viz.html">
+      <file leaf-file-name="guard_overview.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/production/guard_overview.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="119" column="34" lean-forward="false" selection-start-line="119" selection-start-column="34" selection-end-line="119" selection-end-column="34" />
-              <folding>
-                <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <marker date="1484874492000" expanded="false" signature="1464:3590" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="guard_contract_history.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/production/guard_contract_history.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="33" column="38" lean-forward="false" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+            <state relative-caret-position="360">
+              <caret line="206" column="182" lean-forward="false" selection-start-line="206" selection-start-column="182" selection-end-line="206" selection-end-column="182" />
               <folding>
                 <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -84,15 +63,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="guard_active_opportunities.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/production/guard_active_opportunities.html">
+      <file leaf-file-name="guard_impact_model.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/production/guard_impact_model.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
-              <caret line="33" column="38" lean-forward="false" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+            <state relative-caret-position="645">
+              <caret line="206" column="78" lean-forward="false" selection-start-line="195" selection-start-column="24" selection-end-line="206" selection-end-column="78" />
               <folding>
                 <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="e#42774#42779#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -160,16 +140,16 @@
         <option value="$PROJECT_DIR$/production/guard_company_profiles.php" />
         <option value="$PROJECT_DIR$/production/guard_contracts.xml" />
         <option value="$PROJECT_DIR$/production/guard_overview1.html" />
-        <option value="$PROJECT_DIR$/src/scss/custom.scss" />
         <option value="$PROJECT_DIR$/production/guard_impact_model.html" />
-        <option value="$PROJECT_DIR$/production/guard_overview.html" />
         <option value="$PROJECT_DIR$/production/guard_contractors.html" />
         <option value="$PROJECT_DIR$/production/guard_submit_info.html" />
-        <option value="$PROJECT_DIR$/production/guard_industry_calendar.html" />
         <option value="$PROJECT_DIR$/production/guard_active_opportunities.html" />
         <option value="$PROJECT_DIR$/production/guard_contract_history.html" />
         <option value="$PROJECT_DIR$/production/guard_data_download.html" />
         <option value="$PROJECT_DIR$/production/guard_other_viz.html" />
+        <option value="$PROJECT_DIR$/production/guard_industry_calendar.html" />
+        <option value="$PROJECT_DIR$/src/scss/custom.scss" />
+        <option value="$PROJECT_DIR$/production/guard_overview.html" />
       </list>
     </option>
   </component>
@@ -394,12 +374,12 @@
       <workItem from="1483901943492" duration="28407000" />
       <workItem from="1484167397494" duration="48249000" />
       <workItem from="1484774031351" duration="18444000" />
-      <workItem from="1484858594529" duration="7958000" />
+      <workItem from="1484858594529" duration="10148000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104419000" />
+    <option name="totallyTimeSpent" value="106609000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -691,38 +671,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/production/guard_contractors.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="33" column="34" lean-forward="false" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
-          <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/production/guard_industry_calendar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="29" column="38" lean-forward="false" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
-          <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scss/custom.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="366" column="10" lean-forward="false" selection-start-line="366" selection-start-column="10" selection-end-line="366" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/production/guard_submit_info.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -735,47 +683,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/production/guard_impact_model.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="35" column="46" lean-forward="false" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
-          <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#42774#42779#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/production/guard_overview.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-917">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/production/guard_other_viz.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="119" column="34" lean-forward="false" selection-start-line="119" selection-start-column="34" selection-end-line="119" selection-end-column="34" />
-          <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <marker date="1484874492000" expanded="false" signature="1464:3590" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/production/guard_data_download.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="119" column="34" lean-forward="false" selection-start-line="117" selection-start-column="28" selection-end-line="119" selection-end-column="34" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/production/guard_active_opportunities.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="114" column="0" lean-forward="true" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
           <folding>
             <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -796,10 +719,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/production/guard_active_opportunities.html">
+    <entry file="file://$PROJECT_DIR$/production/guard_other_viz.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="33" column="38" lean-forward="false" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+        <state relative-caret-position="405">
+          <caret line="119" column="34" lean-forward="false" selection-start-line="119" selection-start-column="34" selection-end-line="119" selection-end-column="34" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <marker date="1484874492000" expanded="false" signature="1464:3590" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/production/guard_industry_calendar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="192" column="45" lean-forward="false" selection-start-line="192" selection-start-column="45" selection-end-line="192" selection-end-column="45" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <marker date="1484875835000" expanded="false" signature="9793:9805" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/custom.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="4524" column="14" lean-forward="false" selection-start-line="4524" selection-start-column="14" selection-end-line="4524" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/production/guard_impact_model.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="206" column="78" lean-forward="false" selection-start-line="195" selection-start-column="24" selection-end-line="206" selection-end-column="78" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#42774#42779#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/production/guard_contractors.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="292" column="133" lean-forward="false" selection-start-line="292" selection-start-column="62" selection-end-line="292" selection-end-column="133" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/production/guard_overview.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="206" column="182" lean-forward="false" selection-start-line="206" selection-start-column="182" selection-end-line="206" selection-end-column="182" />
           <folding>
             <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
